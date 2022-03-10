@@ -44,9 +44,10 @@ A few options can be customized with environment variables:
 |              |automatically recognized                                     |
 +--------------+-------------------------------------------------------------+
 
-Example::
+Examples::
 
-  ODOO_DB_NAME=demo locust -f examples/locustfile.py --host http://localhost:8069 
+  ODOO_DB_NAME=demo locust -f examples/locustfile.py --host http://localhost:8069
+  ODOO_DB_NAME=testing locust --headless -f examples/locustfile.py -H http://localhost -r 1 -u 10 -t 60 --html report.html 
 
 
 Check the `examples <https://github.com/camptocamp/locustodoorpc/tree/master/examples>`_
