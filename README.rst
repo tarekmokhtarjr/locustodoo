@@ -13,6 +13,7 @@ Links
 Description
 -----------
 
+This is a clone from `locust <https://github.com/camptocamp/locustodoorpc>`_ , i also updated the code because some classes in locust are deprecated and replaced by other classes.
 Locust custom client integrating the `odoorpc <https://github.com/osiell/odoorpc>`_ library, so you can run load-testing on your odoo services. Have a look at the feature list of `locust <https://github.com/locustio/locust/#description>`_ to see what you can do.
 
 Installation
@@ -50,7 +51,14 @@ Examples::
   ODOO_DB_NAME=testing locust --headless -f examples/locustfile.py -H http://localhost -r 1 -u 10 -t 60 --html report.html 
 
 
-Check the `examples <https://github.com/camptocamp/locustodoorpc/tree/master/examples>`_
+Using Dockerfile::
+
+  Docker build . -t locustodoo
+  docker run --env ODOO_DB_NAME=testing --network=host -v $PWD:/mnt/locust -w /mnt/locust locustodoo locust --headless -f examples/locustfile.py -H http://localhost -r 1 -u 10 -t 60 --html report.html
+
+
+
+Check the `examples <https://gitlab.com/atarekmokhtar90/locustodoorpc/-/tree/main/examples>`_
 
 .. image:: https://raw.githubusercontent.com/camptocamp/locustodoorpc/master/images/locustodoorpc.png
 
