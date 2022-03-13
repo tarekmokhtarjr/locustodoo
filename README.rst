@@ -13,7 +13,7 @@ Links
 Description
 -----------
 
-This is a clone from `locust <https://github.com/camptocamp/locustodoorpc>`_ , i also updated the code because some classes in locust are deprecated and replaced by other classes.
+This is a clone from `locustodoorpc <https://github.com/camptocamp/locustodoorpc>`_ , i also updated the code because some classes in locust are deprecated and replaced by other classes.
 Locust custom client integrating the `odoorpc <https://github.com/osiell/odoorpc>`_ library, so you can run load-testing on your odoo services. Have a look at the feature list of `locust <https://github.com/locustio/locust/#description>`_ to see what you can do.
 
 Installation
